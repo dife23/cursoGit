@@ -1,4 +1,4 @@
 package com.automationPractice.pages;
 
-public class home {
+public class Home {
 }
