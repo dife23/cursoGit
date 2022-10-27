@@ -1,4 +1,4 @@
 package com.automationPractice.steps;
 
-public class IrAlHome {
+public class IrAlHomeStep {
 }
