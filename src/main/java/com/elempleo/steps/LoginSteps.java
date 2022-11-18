@@ -16,18 +16,15 @@ public class LoginSteps {
         elempleoHomePage.iniciarLaSesion();
     }
 
-
     @Step
-    public void ingresarUsuario()    {
-        loginPage.ingresarElUsuario();
+    public void ingresarUsuario(String usuario)    {
+        loginPage.ingresarElUsuario(usuario);
     }
 
     @Step
-    public void ingresarClave()    {
-        loginPage.ingresarElUsuario();
-    }
+    public void ingresarClave(String clave) { loginPage.ingresarLaClave(clave); }
 
-
-
+    @Step
+    public void autenticarse() {loginPage.clickEnIniciarSesion();}
 
 }

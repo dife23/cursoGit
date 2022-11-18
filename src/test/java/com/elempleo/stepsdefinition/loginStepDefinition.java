@@ -13,6 +13,7 @@ public class loginStepDefinition {
 
     @Steps
     ElempleoHomePage elempleoHomePage;
+
     @Steps
     LoginSteps loginSteps;
 
@@ -21,10 +22,11 @@ public class loginStepDefinition {
         elempleoHomePage.open();
         loginSteps.iniciarSesion();
     }
-    @When("ingreso los datos de usuario y contrasena ")
-    public void ingresoLosDatosDeUsuarioYContrasena() {
-        loginSteps.ingresarUsuario();
-        loginSteps.ingresarClave();
+    @When("ingreso los datos de usuario {string} y contrasena {string}")
+    public void ingresoLosDatosDeUsuarioYContrasena(String usuario, String clave) {
+        loginSteps.ingresarUsuario(usuario);
+        loginSteps.ingresarClave(clave);
+        loginSteps.autenticarse();
 
     }
     @Then("valido el ingreso exitoso")
